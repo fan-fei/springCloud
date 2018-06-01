@@ -4,6 +4,12 @@
   <artifactId>cloudGateway</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+<parent>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-parent</artifactId>
+  <version>2.0.2.RELEASE</version>
+</parent>
+
 <dependencyManagement>
     <dependencies>
         <dependency>
@@ -31,10 +37,9 @@
         <version>2.0.0.RC2</version>
     </dependency>
 	<dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-zuul</artifactId>
-        <version>2.0.0.M2</version>
-    </dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+	</dependency>
 </dependencies><repositories>
     <repository>
         <id>spring-milestones</id>
@@ -45,5 +50,14 @@
         </snapshots>
     </repository>
 </repositories>
+
+<build>
+	<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>
+	</plugins>
+</build>
 
 </project>
